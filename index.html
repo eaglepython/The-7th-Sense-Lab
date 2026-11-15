@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The 7th Sense Lab — Joseph Bidias</title>
+<meta name="description" content="Quantitative research and AI governance by Joseph Bidias. QuantRisk, a regime-aware pairs trader, and AI governance prototypes." />
+<style>
+  :root{
+    --bg:#0E1117;--panel:#161B26;--panel2:#1C2230;--line:#2A3242;
+    --text:#E6EAF2;--muted:#9AA7BD;--accent:#5DA9E9;--accent2:#3ED0A3;--amber:#F4B942;--violet:#B589E6;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:radial-gradient(1200px 620px at 72% -12%,#1a2436 0%,var(--bg) 55%);
+    color:var(--text);font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+  header{padding:70px 0 34px}
+  .eyebrow{color:var(--accent);font-weight:600;letter-spacing:.16em;text-transform:uppercase;font-size:12px}
+  h1{font-size:50px;line-height:1.06;margin:.26em 0 .18em;letter-spacing:-.02em}
+  .tag{font-size:21px;color:var(--muted);max-width:760px}
+  .who{margin:16px 0 0;color:var(--muted);max-width:760px}
+  .who b{color:var(--text)}
+  .badges{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 0}
+  .badge{background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:6px 13px;font-size:13px;color:var(--muted)}
+  .links{display:flex;gap:14px;margin:22px 0 0;flex-wrap:wrap}
+  .links a{color:var(--accent);text-decoration:none;font-weight:600}
+  section{padding:34px 0;border-top:1px solid var(--line)}
+  h2{font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 18px}
+  .flag{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .big{background:linear-gradient(160deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:18px;padding:26px;position:relative}
+  .big .pill{display:inline-block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#071019;background:var(--accent2);border-radius:999px;padding:3px 10px;font-weight:700}
+  .big h3{font-size:22px;margin:14px 0 8px}
+  .big p{color:var(--muted);font-size:14.5px;margin:0 0 18px}
+  .big .go{display:flex;gap:14px;flex-wrap:wrap}
+  .big .go a{color:var(--accent);text-decoration:none;font-weight:600;font-size:14.5px}
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px}
+  .card .proto{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--amber)}
+  .card h3{margin:7px 0 6px;font-size:17px}
+  .card p{margin:0 0 13px;color:var(--muted);font-size:14px}
+  .card .go a{color:var(--accent);text-decoration:none;font-weight:600;font-size:13.5px;margin-right:14px}
+  footer{padding:34px 0 60px;color:var(--muted);font-size:13.5px;border-top:1px solid var(--line)}
+  footer a{color:var(--accent);text-decoration:none}
+  @media(max-width:820px){.flag,.grid{grid-template-columns:1fr}h1{font-size:36px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">The 7th Sense Lab</div>
+    <h1>Risk you can check.</h1>
+    <p class="tag">Quantitative research and AI governance — rigorous methods, honest reporting, and results you can reproduce.</p>
+    <p class="who">By <b>Joseph Bidias</b>, quantitative researcher and AI governance specialist · AI2030 Global Fellow. Below is a curated index of my work: flagships first, prototypes labeled honestly.</p>
+    <div class="badges">
+      <span class="badge">Quant risk</span><span class="badge">Econometrics</span>
+      <span class="badge">VaR · ES · Stress</span><span class="badge">AI governance</span>
+      <span class="badge">Python</span><span class="badge">MIT licensed</span>
+    </div>
+    <div class="links">
+      <a href="https://github.com/eaglepython">GitHub ↗</a>
+      <a href="#flagships">Flagships ↓</a>
+      <a href="#governance">AI governance ↓</a>
+    </div>
+  </header>
+
+  <section id="flagships">
+    <h2>Flagships — working software</h2>
+    <div class="flag">
+      <div class="big">
+        <span class="pill">Flagship</span>
+        <h3>QuantRisk</h3>
+        <p>A daily fixed-income and credit-risk pipeline: valuations and key-rate durations, VaR and Expected Shortfall, a named-scenario stress engine, and a credit PD model with macro stress. ~4,800 lines of Python, 37 passing tests, an HTML report and a Streamlit dashboard, with Docker, CI, and Terraform. Runs on sample data, or real FRED Treasury curves when configured.</p>
+        <div class="go">
+          <a href="https://github.com/eaglepython/quantrisk">Repo ↗</a>
+          <a href="https://quantrisk1.netlify.app/">Live showcase ↗</a>
+        </div>
+      </div>
+      <div class="big">
+        <span class="pill">Capstone</span>
+        <h3>Regime-Aware Pairs Trader</h3>
+        <p>Does pausing a pairs trade during high-volatility regimes help? A Markov-Switching filter tested on XLE/XOP across the 2018 oil selloff and the COVID crash, with cointegration tests and VaR backtests. Reported straight: the pair was not cointegrated and neither strategy made money, but the filter cut the drawdown and sat out the crash. An honest null result.</p>
+        <div class="go">
+          <a href="https://github.com/eaglepython/Regime-aware-pairs-trader">Repo ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Quantitative finance</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Quant AI/ML Portfolio</h3>
+        <p>Econometrics, option pricing, ensemble signals, and related research. Backtested and educational.</p>
+        <div class="go"><a href="https://github.com/eaglepython/quant_ai_ml_portfolio">Repo ↗</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="governance">
+    <h2>AI governance & policy — prototypes on sample data</h2>
+    <div class="grid">
+      <div class="card">
+        <span class="proto">Prototype</span>
+        <h3>Healthcare LLM Governance Toolkit</h3>
+        <p>A weighted risk questionnaire for healthcare AI and a mock oversight dashboard.</p>
+        <div class="go"><a href="https://github.com/eaglepython/healthcare-llm-governance-toolkit">Repo ↗</a><a href="https://eaglepython.github.io/healthcare-llm-governance-toolkit">Demo ↗</a></div>
+      </div>
+      <div class="card">
+        <span class="proto">Prototype</span>
+        <h3>Multi-LLM Orchestration Platform</h3>
+        <p>Routing requests across providers to reduce single-vendor dependence.</p>
+        <div class="go"><a href="https://github.com/eaglepython/multi-llm-orchestration-platform">Repo ↗</a><a href="https://eaglepython.github.io/multi-llm-orchestration-platform/">Demo ↗</a></div>
+      </div>
+      <div class="card">
+        <span class="proto">Prototype</span>
+        <h3>AI Ethics Monitoring Dashboard</h3>
+        <p>Which bias and fairness measures an oversight team needs on one screen.</p>
+        <div class="go"><a href="https://github.com/eaglepython/ai-ethics-monitoring-dashboard">Repo ↗</a><a href="https://eaglepython.github.io/ai-ethics-monitoring-dashboard">Demo ↗</a></div>
+      </div>
+      <div class="card">
+        <span class="proto">Prototype</span>
+        <h3>Policy Analysis Dashboard</h3>
+        <p>Market concentration (HHI) and cost analysis from an uploaded CSV.</p>
+        <div class="go"><a href="https://github.com/eaglepython/policy-analysis-dashboard">Repo ↗</a></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>I build and study systems where a wrong answer reaches a real person. The hard question is rarely the model; it is who checks it, what gets measured, and what happens when a check fails.</p>
+    <p><a href="https://github.com/eaglepython">github.com/eaglepython</a> · Released under the MIT License. Prototypes run on sample or simulated data; nothing here is investment advice.</p>
+  </footer>
+
+</div>
+</body>
+</html>
