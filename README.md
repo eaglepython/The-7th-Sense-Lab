@@ -11,7 +11,7 @@ Rigorous methods, honest reporting, and results you can reproduce.
 ![AI](https://img.shields.io/badge/AI_Governance-·_Policy-0E6B5E?style=for-the-badge)
 ![Fellow](https://img.shields.io/badge/AI2030-Global_Fellow-7D3C98?style=for-the-badge)
 
-[**GitHub**](https://github.com/eaglepython) · [**Portfolio site**](https://eaglepython.github.io/The-7th-Sense-Lab/) · The 7th Sense Lab
+[**Portfolio site**](https://the7thsenselab.vercel.app/) · [**GitHub**](https://github.com/eaglepython)
 
 </div>
 
