@@ -76,6 +76,16 @@ Does pausing a pairs trade during high-volatility regimes improve risk-adjusted 
 
 ---
 
+## Full-stack and web engineering
+
+| Project | What it is | |
+|---|---|---|
+| **Bidias E-Commerce Platform** | A MERN-stack storefront: product catalog, user accounts, Stripe payments, and an admin area (React, Node.js, MongoDB, TypeScript). | [Repository](https://github.com/eaglepython/Bidias-E-Com-FullStack-App) |
+| **Nexus Weather Intelligence** | A React weather app with geolocation, dynamic theming, and OpenWeatherMap forecasts (React, Vite, CSS). | [Repository](https://github.com/eaglepython/Nexus) |
+| **Interactive JavaScript Portfolio** | A vanilla-JavaScript site on the DOM and Canvas APIs, with animated effects and keyboard navigation, no framework. | [Repository](https://github.com/eaglepython/JavaScript-DOM-Portfolio) |
+
+---
+
 ## AI governance and policy
 
 Browser prototypes that explore practical problems in AI oversight. Each runs on sample or simulated data and is labeled that way on purpose. None is deployed in an agency or company.
