@@ -76,6 +76,17 @@ Does pausing a pairs trade during high-volatility regimes improve risk-adjusted 
 
 ---
 
+## Machine learning and GenAI
+
+An end-to-end suite of sixteen runnable ML and GenAI projects, each its own app built around real models and standard datasets. Streamlit and FastAPI front ends; reference implementations, not production deployments.
+
+| Project | What it is | |
+|---|---|---|
+| **Traditional ML (11 projects)** | Credit-risk scoring and CECL modeling, fraud detection, stock and energy forecasting, customer churn, supply-chain optimization, recommenders, computer vision, and NLP, each a standalone Streamlit or FastAPI app. | [Repository](https://github.com/eaglepython/Gen_AI-Portofolio/tree/main/ML_EndToEnd_Projects/traditional_ml) |
+| **Generative AI (5 projects)** | Code generation, AI content creation, document intelligence, a conversational assistant with intent recognition and entity extraction, and drug-discovery screening, built on open transformer models. | [Repository](https://github.com/eaglepython/Gen_AI-Portofolio/tree/main/ML_EndToEnd_Projects/gen_ai) |
+
+---
+
 ## Full-stack and web engineering
 
 | Project | What it is | |
