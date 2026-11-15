@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Joseph Bidias — Research &amp; Projects</title>
+<meta name="description" content="A categorized catalog of Joseph Bidias's work: reinforcement learning, quantitative finance and ML, generative AI, risk and governance, and full-stack engineering." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#070A10; --bg2:#0C111A; --panel:rgba(255,255,255,.028); --panel-br:rgba(255,255,255,.08);
+    --text:#EAEFF7; --muted:#9BA8BF; --dim:#6B778C;
+    --blue:#5DA9E9; --teal:#3ED0A3; --violet:#B589E6; --amber:#F4B942;
+    --grad:linear-gradient(110deg,#5DA9E9 0%,#3ED0A3 48%,#B589E6 100%);
+    --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.65;
+    overflow-x:hidden;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+  h1,h2,h3,.dname{font-family:"Space Grotesk","Inter",sans-serif}
+  .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .mono{font-family:var(--mono)}
+
+  nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(7,10,16,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--panel-br)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:15px 24px}
+  nav .brand{font-family:"Space Grotesk";font-weight:700;letter-spacing:.02em;font-size:16px}
+  nav .menu{display:flex;gap:24px;font-size:14px;color:var(--muted)}
+  nav .menu a{transition:.2s} nav .menu a:hover{color:var(--text)}
+  @media(max-width:760px){nav .menu{display:none}}
+
+  header.top{padding:140px 0 10px}
+  .lab{font-family:var(--mono);font-size:12.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--blue);margin:0 0 14px;display:flex;align-items:center;gap:12px}
+  .lab::before{content:"";width:28px;height:1px;background:var(--blue)}
+  .dname{font-size:clamp(40px,7vw,78px);line-height:1;font-weight:700;letter-spacing:-.03em;margin:0}
+  .lede{max-width:680px;font-size:clamp(16px,2vw,20px);color:var(--muted);margin:20px 0 0}
+
+  section{position:relative;padding:60px 0 10px}
+  .htitle{font-size:clamp(24px,3.4vw,34px);font-weight:700;letter-spacing:-.02em;margin:0 0 8px}
+  .hsub{color:var(--muted);max-width:720px;margin:0 0 30px}
+
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  .card{position:relative;border:1px solid var(--panel-br);background:var(--panel);border-radius:16px;padding:26px;transition:.3s}
+  .card:hover{transform:translateY(-4px);border-color:rgba(93,169,233,.4);background:rgba(93,169,233,.03)}
+  .kind{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--teal)}
+  .kind.research{color:var(--blue)} .kind.proto{color:var(--amber)}
+  .card h3{margin:9px 0 6px;font-size:20px;letter-spacing:-.01em}
+  .card p{color:var(--muted);font-size:14.5px;margin:0 0 16px}
+  .chips{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 18px}
+  .chip{font-family:var(--mono);font-size:11px;color:var(--muted);border:1px solid var(--panel-br);border-radius:7px;padding:4px 9px}
+  .links{display:flex;gap:18px;flex-wrap:wrap}
+  .links a{font-weight:600;font-size:13.5px;color:var(--blue);display:inline-flex;align-items:center;gap:6px;transition:.2s}
+  .links a:hover{color:var(--teal)}
+  .links a .ar{transition:.2s} .links a:hover .ar{transform:translateX(3px)}
+  @media(max-width:820px){.grid{grid-template-columns:1fr}}
+
+  .note{border:1px solid var(--panel-br);background:var(--bg2);border-radius:14px;padding:18px 22px;color:var(--muted);font-size:14px;margin:34px 0 0}
+
+  footer{padding:70px 0 70px;text-align:center;border-top:1px solid rgba(255,255,255,.05);margin-top:60px}
+  footer .big{font-family:"Space Grotesk";font-size:clamp(26px,4vw,40px);font-weight:700;letter-spacing:-.02em;margin:0 0 14px}
+  footer p{color:var(--muted);max-width:600px;margin:0 auto 20px}
+  footer a{color:var(--blue)}
+  footer .fnote{color:var(--dim);font-size:12.5px;margin-top:30px}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand grad" href="index.html">The 7th Sense Lab</a>
+    <div class="menu">
+      <a href="index.html">Home</a>
+      <a href="#rl">Reinforcement Learning</a>
+      <a href="#quant">Quant &amp; ML</a>
+      <a href="#genai">Generative AI</a>
+      <a href="#gov">Governance</a>
+    </div>
+  </div>
+</nav>
+
+<header class="top">
+  <div class="wrap">
+    <div class="lab">Research and Projects</div>
+    <h1 class="dname">A catalog of <span class="grad">real work.</span></h1>
+    <p class="lede">A categorized index of my work across reinforcement learning, quantitative finance and machine learning, generative AI, risk and governance, and full-stack engineering. Research and educational projects, built on public data and open models. Each links to code or a live demo. Backtested and simulated results are not live performance, and prototypes are labeled as such.</p>
+  </div>
+</header>
+
+<section id="rl">
+  <div class="wrap">
+    <div class="htitle">Reinforcement learning</div>
+    <p class="hsub">Exploration-and-exploitation methods and their behavior under real conditions.</p>
+    <div class="grid">
+      <div class="card">
+        <div class="kind research">Research study</div>
+        <h3>Bandit Portfolio Selection</h3>
+        <p>Implemented and compared UCB and epsilon-greedy multi-armed bandit policies for daily portfolio selection across 30 U.S. equities, stress-tested through the March to April 2020 COVID market shock. Tested longer holding periods and EMA reward updates, and found epsilon-greedy with those enhancements most robust in the volatile regime. The comparison is reported straight, including where UCB committed too early and lost.</p>
+        <div class="chips"><span class="chip">Python</span><span class="chip">UCB</span><span class="chip">epsilon-greedy</span><span class="chip">EMA</span><span class="chip">backtest</span></div>
+        <div class="links"><a href="https://github.com/eaglepython/quant_ai_ml_portfolio">Quant portfolio <span class="ar">-&gt;</span></a></div>
+      </div>
+      <div class="card">
+        <div class="kind research">Research</div>
+        <h3>Multi-Agent Trading Research</h3>
+        <p>A research project combining reinforcement-learning agents with risk management and neural-network signals, backtested on historical data through the OANDA API. Research and educational, not live trading.</p>
+        <div class="chips"><span class="chip">Python</span><span class="chip">RL agents</span><span class="chip">TensorFlow</span></div>
+        <div class="links"><a href="https://github.com/eaglepython/Finance-Architect-Portofolio">Repository <span class="ar">-&gt;</span></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="quant">
+  <div class="wrap">
+    <div class="htitle">Quantitative finance and machine learning</div>
+    <p class="hsub">Risk analytics, econometrics, and signal research, with working software.</p>
+    <div class="grid">
+      <div class="card">
+        <div class="kind">Flagship</div>
+        <h3>QuantRisk</h3>
+        <p>A credit and fixed-income risk platform built end to end in Python: valuations and key-rate durations, Value-at-Risk and Expected Shortfall, a named-scenario stress engine, and a credit PD model with macro stress. 37 passing tests, an HTML report, and a live dashboard.</p>
+        <div class="chips"><span class="chip">Python</span><span class="chip">SQLAlchemy</span><span class="chip">Streamlit</span><span class="chip">Docker</span><span class="chip">Terraform</span></div>
+        <div class="links"><a href="https://quantrisk-xck8k3qxmovw9fr7mgpbgn.streamlit.app/">Live dashboard <span class="ar">-&gt;</span></a><a href="https://github.com/eaglepython/quantrisk">Code <span class="ar">-&gt;</span></a></div>
+      </div>
+      <div class="card">
+        <div class="kind research">Master's capstone</div>
+        <h3>Regime-Aware Pairs Trader</h3>
+        <p>A Markov-switching regime filter tested on the XLE/XOP energy ETF pair across the 2018 oil selloff and the COVID crash, with cointegration tests, VaR backtests, and a stress analysis. Reported straight: the pair was not cointegrated and neither strategy was profitable, but the filter cut the maximum drawdown. An honest null result.</p>
+        <div class="chips"><span class="chip">Python</span><span class="chip">statsmodels</span><span class="chip">Markov-switching</span></div>
+        <div class="links"><a href="https://github.com/eaglepython/Regime-aware-pairs-trader">Repository and figures <span class="ar">-&gt;</span></a></div>
+      </div>
+      <div class="card">
+        <div class="kind research">Portfolio</div>
+        <h3>Quant AI/ML Portfolio</h3>
+        <p>A collection of quantitative research: econometrics, option pricing, ensemble signal models, and bandit-based portfolio selection. Backtested and educational, with honest notes on results.</p>
+        <div class="chips"><span class="chip">Python</span><span class="chip">XGBoost</span><span class="chip">LightGBM</span><span class="chip">statsmodels</span></div>
+        <div class="links"><a href="https://github.com/eaglepython/quant_ai_ml_portfolio">Repository <span class="ar">-&gt;</span></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="genai">
+  <div class="wrap">
+    <div class="htitle">Generative AI and machine learning</div>
+    <p class="hsub">End-to-end ML and GenAI projects on open models and standard datasets.</p>
+    <div class="grid">
+      <div class="card">
+        <div class="kind">Project suite</div>
+        <h3>End-to-End ML and GenAI Suite</h3>
+        <p>Sixteen runnable projects: eleven traditional ML apps (credit risk and CECL modeling, fraud detection, forecasting, churn, recommenders, computer vision, NLP) and five GenAI apps (code generation, content creation, document intelligence, a conversational assistant, drug-discovery screening). Streamlit and FastAPI front ends; reference implementations, not production deployments.</p>
+        <div class="chips"><span class="chip">Python</span><span class="chip">PyTorch</span><span class="chip">Transformers</span><span class="chip">FastAPI</span><span class="chip">Streamlit</span></div>
+        <div class="links"><a href="https://github.com/eaglepython/Gen_AI-Portofolio">Repository <span class="ar">-&gt;</span></a></div>
+      </div>
+      <div class="card">
+        <div class="kind proto">Prototype</div>
+        <h3>Multi-LLM Orchestration Platform</h3>
+        <p>A prototype for routing requests across model providers with failover and cost awareness. The dashboard runs on sample data and the backend is a design draft.</p>
+        <div class="chips"><span class="chip">Node.js</span><span class="chip">React</span><span class="chip">OpenAI</span><span class="chip">Anthropic</span></div>
+        <div class="links"><a href="https://eaglepython.github.io/multi-llm-orchestration-platform/">Demo <span class="ar">-&gt;</span></a><a href="https://github.com/eaglepython/multi-llm-orchestration-platform">Code <span class="ar">-&gt;</span></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gov">
+  <div class="wrap">
+    <div class="htitle">Risk, governance, and policy</div>
+    <p class="hsub">Browser prototypes exploring practical problems in AI oversight. Each runs on sample or simulated data and is labeled that way. None is deployed in an agency or company.</p>
+    <div class="grid">
+      <div class="card">
+        <div class="kind proto">Prototype</div>
+        <h3>Healthcare LLM Governance Toolkit</h3>
+        <p>A front-end prototype for risk assessment and oversight of healthcare AI, with a weighted risk questionnaire and a mock oversight dashboard. Runs on sample data.</p>
+        <div class="chips"><span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">React</span></div>
+        <div class="links"><a href="https://eaglepython.github.io/healthcare-llm-governance-toolkit/">Demo <span class="ar">-&gt;</span></a><a href="https://github.com/eaglepython/healthcare-llm-governance-toolkit">Code <span class="ar">-&gt;</span></a></div>
+      </div>
+      <div class="card">
+        <div class="kind proto">Prototype</div>
+        <h3>AI Ethics Monitoring Dashboard</h3>
+        <p>A prototype for monitoring bias and fairness in AI models, with fairness metrics and compliance views. Runs on simulated data.</p>
+        <div class="chips"><span class="chip">Python</span><span class="chip">Streamlit</span><span class="chip">scikit-learn</span></div>
+        <div class="links"><a href="https://eaglepython.github.io/ai-ethics-monitoring-dashboard/">Demo <span class="ar">-&gt;</span></a><a href="https://github.com/eaglepython/ai-ethics-monitoring-dashboard">Code <span class="ar">-&gt;</span></a></div>
+      </div>
+      <div class="card">
+        <div class="kind proto">Prototype</div>
+        <h3>Policy Analysis Dashboard</h3>
+        <p>Market concentration (HHI) and cost analysis from an uploaded CSV, as a lightweight oversight aid. Runs on user-provided data.</p>
+        <div class="chips"><span class="chip">Python</span><span class="chip">Analytics</span></div>
+        <div class="links"><a href="https://github.com/eaglepython/policy-analysis-dashboard">Code <span class="ar">-&gt;</span></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="fullstack">
+  <div class="wrap">
+    <div class="htitle">Full-stack and web engineering</div>
+    <p class="hsub">Production web applications built end to end.</p>
+    <div class="grid">
+      <div class="card">
+        <div class="kind">Full-stack</div>
+        <h3>Bidias E-Commerce Platform</h3>
+        <p>A MERN-stack storefront with product catalog, user accounts, Stripe payment processing, and an admin area.</p>
+        <div class="chips"><span class="chip">React</span><span class="chip">Node.js</span><span class="chip">MongoDB</span><span class="chip">Stripe</span></div>
+        <div class="links"><a href="https://bidias-e-com-full-stack-app.netlify.app">Live <span class="ar">-&gt;</span></a><a href="https://github.com/eaglepython/Bidias-E-Com-FullStack-App">Code <span class="ar">-&gt;</span></a></div>
+      </div>
+      <div class="card">
+        <div class="kind">Full-stack</div>
+        <h3>Nexus Weather Intelligence</h3>
+        <p>A React weather app with geolocation, dynamic theming, and forecasts from the OpenWeatherMap API.</p>
+        <div class="chips"><span class="chip">React</span><span class="chip">Vite</span><span class="chip">CSS</span></div>
+        <div class="links"><a href="https://eaglepython.github.io/Nexus/">Live <span class="ar">-&gt;</span></a><a href="https://github.com/eaglepython/Nexus">Code <span class="ar">-&gt;</span></a></div>
+      </div>
+    </div>
+    <div class="note">This catalog indexes public research and educational projects. Prototypes run on sample or simulated data; backtested and simulated results are not live performance; nothing here is investment advice.</div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="big grad">Let's build something careful.</div>
+    <p>Quantitative research, machine learning, and AI governance, with an emphasis on honest, reproducible results.</p>
+    <p><a href="index.html">Back to the hub</a> &nbsp;·&nbsp; <a href="https://github.com/eaglepython">github.com/eaglepython</a></p>
+    <div class="fnote">Released under the MIT License.</div>
+  </div>
+</footer>
+
+</body>
+</html>
