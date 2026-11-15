@@ -32,9 +32,9 @@
 
   <!-- availability chip -->
   <g transform="translate(96,96)">
-    <rect x="0" y="0" width="330" height="34" rx="17" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.09"/>
+    <rect x="0" y="0" width="392" height="34" rx="17" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.09"/>
     <circle cx="20" cy="17" r="4.5" fill="#3ED0A3"/>
-    <text x="36" y="22" fill="#9BA8BF" font-size="14" font-family="'JetBrains Mono',monospace">Available for the Jan 2027 research cohort</text>
+    <text x="36" y="22" fill="#9BA8BF" font-size="14" font-family="'JetBrains Mono',monospace">Open to new roles and research opportunities</text>
   </g>
 
   <!-- name -->
