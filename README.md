@@ -41,7 +41,7 @@ My work tries to take that seriously. I write code that runs, I report results e
 
 A daily risk pipeline that turns a bond and credit portfolio into the numbers a risk desk acts on: valuations and key-rate durations, Value-at-Risk and Expected Shortfall, a named-scenario stress engine, and a credit PD model with macro stress. Roughly 4,800 lines of Python, **37 passing tests**, an HTML report and a Streamlit dashboard, with Docker, CI, and Terraform. Runs on synthetic sample data, or real Treasury curves from FRED when configured.
 
-[**Repository**](https://github.com/eaglepython/quantrisk)  ·  [**Live showcase**](https://quantrisk1.netlify.app/)
+[**Repository**](https://github.com/eaglepython/quantrisk)  ·  [**Live dashboard**](https://quantrisk-xck8k3qxmovw9fr7mgpbgn.streamlit.app/)  ·  [**Showcase**](https://quantrisk1.netlify.app/)
 
 ### Regime-Aware Pairs Trader
 *Master's capstone in Financial Engineering.*
